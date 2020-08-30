@@ -6,7 +6,7 @@ function getNewsData() {
     loader.setAttribute('id', 'loader')
     // this will be added to 'news-container' element.
     document.getElementById('news-container').appendChild(loader)
-    //make HTTP request with fetch
+    //make HTTP request with fetch. note that this api will work on local server with http protocol.
     var url = 'https://newsapi.org//v2/everything?' +
         'q=covid vaccine&' +
         'language=en&' +
@@ -17,7 +17,6 @@ function getNewsData() {
     fetch(req)
         .then(response => { return response.json() })
         .then((data) => {
-            console.log(data)
             let news_container = document.getElementById('news-container')
             news_container.setAttribute('class', 'row')
             data.articles.forEach((item) => {
