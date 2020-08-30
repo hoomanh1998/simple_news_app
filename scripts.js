@@ -17,6 +17,7 @@ function getNewsData() {
     fetch(req)
         .then(response => { return response.json() })
         .then((data) => {
+            console.log(data)
             let news_container = document.getElementById('news-container')
             news_container.setAttribute('class', 'row')
             data.articles.forEach((item) => {
