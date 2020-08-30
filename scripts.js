@@ -7,7 +7,7 @@ function getNewsData() {
     // this will be added to 'news-container' element.
     document.getElementById('news-container').appendChild(loader)
     //make HTTP request with fetch
-    var url = 'http://newsapi.org//v2/everything?' +
+    var url = 'https://newsapi.org//v2/everything?' +
         'q=covid vaccine&' +
         'language=en&' +
         'sortBy=relevancy&' +
